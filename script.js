@@ -4,7 +4,25 @@ L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
   maxZoom: 19
 }).addTo(map);
 
-var okarec = L.marker([49.2058603, 16.0862453]).addTo(map);
+var myIcon = L.icon({
+    iconUrl: './map-marker.png',
+    iconSize: [48, 48],
+    iconAnchor: [24, 48],
+    popupAnchor: [0, -40],
+    shadowSize: [68, 95],
+    shadowAnchor: [22, 94]
+});
+
+L.Icon.Default.prototype.options = {
+    iconUrl: './map-marker.png',
+    iconSize: [48, 48],
+    iconAnchor: [24, 48],
+    popupAnchor: [0, -40],
+    shadowSize: [68, 95],
+    shadowAnchor: [22, 94]
+};
+
+var okarec = L.marker([49.2058603, 16.0862453], {icon: myIcon}).addTo(map);
 okarec.bindPopup('<b>Okarec 1</b><br><br>Tady bydlí Radkova máma 💖 <br><br><iframe src="https://www.google.com/maps/embed?pb=!4v1606927464407!6m8!1m7!1sJChb6MLGdHJzuOGf5idK0Q!2m2!1d49.20568578257641!2d16.08646607376113!3f331.91097596245265!4f-7.833162723807746!5f0.7820865974627469" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>', {maxWidth: 440})
 
 var kohoutovice = L.marker([49.1902275, 16.5451950]).addTo(map);
@@ -24,3 +42,7 @@ smichov2.bindPopup('<b>Dóm Ještěru</b><br><br>Radek<br><br><iframe src="https
 
 var hejnice = L.marker([50.0538877, 16.4074667]).addTo(map);
 hejnice.bindPopup('<b>Hejnice</b><br><br>Radkovo království', {maxWidth: 440})
+
+var frydlant = L.marker([49.5850425, 18.3317226]).addTo(map);
+frydlant.bindPopup('<b>Sulfolk</b><br><br>Viktor', {maxWidth: 440})
+
