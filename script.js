@@ -47,3 +47,8 @@ hejnice.bindPopup('<b>Hejnice</b><br><br>Radkovo království', {maxWidth: 440})
 var frydlant = L.marker([49.5850425, 18.3317226]).addTo(map);
 frydlant.bindPopup('<b>Sulfolk</b><br><br>Viktor', {maxWidth: 440})
 
+var prilepy = L.marker([49.31797752643246, 17.62701091766403]).addTo(map);
+var prilepyStreetView = `<iframe
+src="https://www.google.com/maps/embed?pb=!4v1607010480528!6m8!1m7!1sStHb2qb4cLwWWahS1lwSdQ!2m2!1d49.31797407162676!2d17.62708839856275!3f213.49060081228353!4f1.2203540037315577!5f0.7820865974627469" width="400" height="300"
+frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>`;
+prilepy.bindPopup(`<b>Přílepy</b><br><br>Kryštofův rodný zelený důlek<br><br>` + prilepyStreetView, {maxWidth: 440})
